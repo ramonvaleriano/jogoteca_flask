@@ -14,6 +14,7 @@ jogo2 = Jogo('Pokemon Gold', 'RPG', 'GBA')
 jogo3 = Jogo('Mortal Kombat', 'Luta', 'SNES')
 lista = [jogo1, jogo2, jogo3]
 
+
 @app.route('/')
 def index():
     return render_template('lista.html', titulo='Jogos',
@@ -33,7 +34,6 @@ def criar():
     lista.append(jogo)
     return render_template('lista.html', titulo='Jogos',
                            jogos=lista)
-
 
 
 app.run(debug=True)
